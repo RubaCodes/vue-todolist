@@ -43,7 +43,10 @@
           </button>
         </form>
         <!-- lista dei todo -->
-        <ul class="pt-2 divide-y divide-blue-700 divide-y-2">
+        <ul
+          v-if="todos.length > 0"
+          class="pt-2 divide-y divide-blue-700 divide-y-2"
+        >
           <li
             class="px-4 py-2 flex justify-between items-center text-lg"
             :class="[todo.completed ? 'line-through' : '']"
@@ -56,6 +59,9 @@
             ></i>
           </li>
         </ul>
+        <div v-else="" class="text-center py-2">
+          Inserisci una Task per continuare
+        </div>
       </div>
     </div>
     <!-- my script  -->
