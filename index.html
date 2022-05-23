@@ -8,21 +8,40 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- cdn tailwind-->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fa -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
   </head>
   <body>
     <div class="container w75 h-screen mx-auto">
       <div class="box w100 rounded bg-gray-300 overflow-hidden">
+        <!-- titolo app -->
         <h1 class="text-center py-4 text-3xl">ToDo List</h1>
+        <!-- form -->
         <form class="text-center py-4 bg-blue-700">
           <input
+            required
             class="py-1 rounded px-2"
             type="text"
             name="Inserisci nuovo todo"
             id=""
           />
-          <button class="ml-3 px-3 py-1 bg-gray-100 rounded">Submit</button>
+          <button class="ml-3 px-3 py-1 bg-gray-100 rounded">
+            <i class="fa-solid fa-circle-plus text-blue-700"></i>
+          </button>
         </form>
+        <!-- lista dei todo -->
+        <ul class="py-4">
+          <li class="px-4 flex justify-between items-center">
+            to do nuemro 1<i class="fa-solid fa-delete-left"></i>
+          </li>
+        </ul>
       </div>
     </div>
     <!-- my script  -->
