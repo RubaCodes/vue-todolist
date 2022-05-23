@@ -20,14 +20,14 @@
   </head>
   <body>
     <div class="container w75 h-screen mx-auto grid place-items-center">
-      <div class="box w-full rounded bg-gray-300 overflow-hidden" id="app">
+      <div class="box w-5/6 rounded bg-gray-300 overflow-hidden" id="app">
         <!-- titolo app -->
         <h1 class="text-center py-4 text-3xl">ToDo List</h1>
         <!-- form -->
         <form class="text-center py-4 bg-blue-700">
           <input
             required
-            class="py-1 rounded px-2"
+            class="py-1 rounded px-2 w-2/3"
             type="text"
             name="Inserisci nuovo todo"
             id=""
@@ -37,9 +37,12 @@
           </button>
         </form>
         <!-- lista dei todo -->
-        <ul class="py-4">
-          <li class="px-4 flex justify-between items-center">
-            to do nuemro 1<i class="fa-solid fa-delete-left"></i>
+        <ul class="pt-2 divide-y divide-blue-700 divide-y-2">
+          <li
+            class="px-4 py-2 flex justify-between items-center"
+            v-for="todo in todos"
+          >
+            {{todo.text}}<i class="fa-solid fa-delete-left"></i>
           </li>
         </ul>
       </div>
