@@ -30,8 +30,5 @@ const app = new Vue({
     removeTodo(index) {
       this.todos.splice(index, 1);
     },
-    isCompleted(elm) {
-      return elm.completed;
-    },
   },
 });

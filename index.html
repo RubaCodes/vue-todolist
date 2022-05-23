@@ -44,6 +44,7 @@
           <li
             class="px-4 py-2 flex justify-between items-center text-lg"
             :class="[todo.completed ? 'line-through' : '']"
+            @click="todo.completed = !todo.completed"
             v-for="(todo,index) in todos"
           >
             {{todo.text}}<i
