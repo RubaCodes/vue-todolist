@@ -1,6 +1,11 @@
 const app = new Vue({
   el: '#app',
   data: {
+    userInput: '',
+    newTodo: {
+      text: '',
+      completed: false,
+    },
     todos: [
       {
         text: 'Andare dal veterinario',
@@ -16,5 +21,16 @@ const app = new Vue({
       },
     ],
   },
-  methods: {},
+  methods: {
+    pushTodo() {
+      if (this.userInput !== ' ') {
+        this.newTodo.text = this.userInput;
+        this.todos.push(this.newTodo);
+      }
+      this.userInput = '';
+    },
+    removeTodo(index) {
+      this.todos.splice(index, 1);
+    },
+  },
 });

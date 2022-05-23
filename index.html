@@ -30,19 +30,25 @@
             class="py-1 rounded px-2 w-2/3"
             type="text"
             name="Inserisci nuovo todo"
-            id=""
+            v-model="userInput"
           />
-          <button class="ml-3 px-3 py-1 bg-gray-100 rounded">
+          <button
+            class="ml-3 px-3 py-1 bg-gray-100 rounded"
+            @click.prevent="pushTodo()"
+          >
             <i class="fa-solid fa-circle-plus text-blue-700"></i>
           </button>
         </form>
         <!-- lista dei todo -->
         <ul class="pt-2 divide-y divide-blue-700 divide-y-2">
           <li
-            class="px-4 py-2 flex justify-between items-center"
-            v-for="todo in todos"
+            class="px-4 py-2 flex justify-between items-center text-lg"
+            v-for="(todo,index) in todos"
           >
-            {{todo.text}}<i class="fa-solid fa-delete-left"></i>
+            {{todo.text}}<i
+              class="fa-solid fa-circle-xmark"
+              @click="removeTodo(index)"
+            ></i>
           </li>
         </ul>
       </div>
