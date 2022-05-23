@@ -43,6 +43,7 @@
         <ul class="pt-2 divide-y divide-blue-700 divide-y-2">
           <li
             class="px-4 py-2 flex justify-between items-center text-lg"
+            :class="[todo.completed ? 'line-through' : '']"
             v-for="(todo,index) in todos"
           >
             {{todo.text}}<i

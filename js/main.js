@@ -5,7 +5,7 @@ const app = new Vue({
     todos: [
       {
         text: 'Andare dal veterinario',
-        completed: false,
+        completed: true,
       },
       {
         text: 'Fare la spesa',
@@ -13,7 +13,7 @@ const app = new Vue({
       },
       {
         text: 'Pulire la camera',
-        completed: false,
+        completed: true,
       },
     ],
   },
@@ -27,9 +27,11 @@ const app = new Vue({
       }
       this.userInput = '';
     },
-    // removeTodo(index) {
-    //   //this.todos.splice(index, 1);
-    //   this.todos[index].completed = true;
-    // },
+    removeTodo(index) {
+      this.todos.splice(index, 1);
+    },
+    isCompleted(elm) {
+      return elm.completed;
+    },
   },
 });
