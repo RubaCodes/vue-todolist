@@ -60,7 +60,8 @@
               {{todo.text}}</span
             >
             <input
-              class="rounded-lg px-2"
+              :placeholder="todo.text"
+              class="rounded-lg px-2 placeholder:text-black"
               :class="{'hidden' : !todo.processing}"
               @keyup.enter="edit(index)"
               v-model="userEdit"
