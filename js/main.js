@@ -13,7 +13,7 @@ const app = new Vue({
       },
       {
         text: 'Pulire la camera',
-        completed: true,
+        completed: false,
       },
     ],
   },
@@ -29,7 +29,6 @@ const app = new Vue({
     },
     removeTodo(index) {
       this.todos.splice(index, 1);
-      console.log(this.todos.length);
     },
   },
 });
