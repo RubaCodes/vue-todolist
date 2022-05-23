@@ -36,7 +36,9 @@ const app = new Vue({
       this.todos.splice(index, 1);
     },
     edit(index) {
-      this.todos[index].text = this.userEdit;
+      if (this.userEdit !== ' ' && this.userEdit !== '') {
+        this.todos[index].text = this.userEdit;
+      }
       this.todos[index].processing = !this.todos[index].processing;
       this.userEdit = '';
     },
