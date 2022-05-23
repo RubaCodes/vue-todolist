@@ -1,7 +1,7 @@
 const app = new Vue({
   el: '#app',
   data: {
-    userInput: null,
+    userInput: '',
     todos: [
       {
         text: 'Andare dal veterinario',
@@ -19,7 +19,7 @@ const app = new Vue({
   },
   methods: {
     pushTodo() {
-      if (this.userInput !== ' ') {
+      if (this.userInput !== ' ' && this.userInput !== '') {
         this.todos.push({
           text: this.userInput,
           completed: false,
